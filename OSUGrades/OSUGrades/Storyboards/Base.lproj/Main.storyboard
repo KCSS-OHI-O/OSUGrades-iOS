@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GLt-D5-0EB">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -46,7 +46,6 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UI9-gd-mPl"/>
-                                            <segue destination="r2D-cT-cmO" kind="show" identifier="welcomeToMain" id="evP-SE-2zw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-2g-KzS">
@@ -79,6 +78,7 @@
                     <connections>
                         <outlet property="nameTextfield" destination="09P-pz-YGO" id="SZ2-CN-1mr"/>
                         <outlet property="passwordTextfield" destination="64E-Sg-xk0" id="Tve-Fh-o8r"/>
+                        <segue destination="r2D-cT-cmO" kind="show" identifier="welcomeToMain" id="5Vs-bi-ChL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,6 +121,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="HvC-XJ-s1a"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="jQI-mW-9rh" id="WnR-89-Qw3"/>
                         <segue destination="zQx-YO-2AK" kind="show" identifier="mainToDetail" id="DSC-6e-uKW"/>
                     </connections>
                 </viewController>

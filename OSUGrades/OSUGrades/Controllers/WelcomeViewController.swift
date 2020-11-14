@@ -17,6 +17,7 @@ class WelcomeViewController: UIViewController {
     }
 
     @IBAction func loginPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: K.Segues.welcomeToMain, sender: nil)
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {

@@ -15,8 +15,25 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="293" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSE1223" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aom-RW-19n">
+                        <rect key="frame" x="16" y="11.5" width="261" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Aom-RW-19n" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="8Xj-mU-7k1"/>
+                    <constraint firstItem="Aom-RW-19n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="V0y-Qk-jZZ"/>
+                    <constraint firstItem="Aom-RW-19n" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="d8l-nP-ud3"/>
+                    <constraint firstAttribute="trailing" secondItem="Aom-RW-19n" secondAttribute="trailing" constant="16" id="xew-q4-UeO"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="courseName" destination="Aom-RW-19n" id="web-9d-g5d"/>
+            </connections>
             <point key="canvasLocation" x="-203" y="110"/>
         </tableViewCell>
     </objects>

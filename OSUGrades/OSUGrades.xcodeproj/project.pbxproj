@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D25013EB255FD72400C20A3E /* FirebaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25013EA255FD72400C20A3E /* FirebaseDelegate.swift */; };
 		D2FD8367255F58AC00387B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD8366255F58AC00387B5A /* AppDelegate.swift */; };
 		D2FD8369255F58AC00387B5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD8368255F58AC00387B5A /* SceneDelegate.swift */; };
 		D2FD836B255F58AC00387B5A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD836A255F58AC00387B5A /* WelcomeViewController.swift */; };
@@ -30,6 +31,8 @@
 		D2FD83E1255FBC4100387B5A /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83E0255FBC4100387B5A /* CourseDetailViewController.swift */; };
 		D2FD83E6255FBC5100387B5A /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83E5255FBC5100387B5A /* AddInfoViewController.swift */; };
 		D2FD83EB255FBC6C00387B5A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83EA255FBC6C00387B5A /* SignupViewController.swift */; };
+		D2FD83F0255FC59E00387B5A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83EF255FC59E00387B5A /* DataManager.swift */; };
+		D2FD83FC255FC60C00387B5A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83FB255FC60C00387B5A /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D25013EA255FD72400C20A3E /* FirebaseDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDelegate.swift; sourceTree = "<group>"; };
 		D2FD8363255F58AC00387B5A /* OSUGrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSUGrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FD8366255F58AC00387B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2FD8368255F58AC00387B5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		D2FD83E0255FBC4100387B5A /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		D2FD83E5255FBC5100387B5A /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		D2FD83EA255FBC6C00387B5A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		D2FD83EF255FC59E00387B5A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D2FD83FB255FC60C00387B5A /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 			children = (
 				D2FD83A1255F59D200387B5A /* Delegates */,
 				D2FD83A5255F59D800387B5A /* Controllers */,
+				D2FD83F4255FC60100387B5A /* Models */,
 				D2FD83A9255F59E300387B5A /* Storyboards */,
 				D2FD8372255F58AE00387B5A /* Assets.xcassets */,
 				D2FD8377255F58AE00387B5A /* Info.plist */,
@@ -165,6 +172,7 @@
 			children = (
 				D2FD8366255F58AC00387B5A /* AppDelegate.swift */,
 				D2FD8368255F58AC00387B5A /* SceneDelegate.swift */,
+				D25013EA255FD72400C20A3E /* FirebaseDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -192,6 +200,15 @@
 				D2FD8374255F58AE00387B5A /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D2FD83F4255FC60100387B5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2FD83EF255FC59E00387B5A /* DataManager.swift */,
+				D2FD83FB255FC60C00387B5A /* Course.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,7 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FD83FC255FC60C00387B5A /* Course.swift in Sources */,
 				D2FD836B255F58AC00387B5A /* WelcomeViewController.swift in Sources */,
+				D2FD83F0255FC59E00387B5A /* DataManager.swift in Sources */,
 				D2FD8367255F58AC00387B5A /* AppDelegate.swift in Sources */,
 				D2FD83EB255FBC6C00387B5A /* SignupViewController.swift in Sources */,
 				D2FD8369255F58AC00387B5A /* SceneDelegate.swift in Sources */,
@@ -347,6 +366,7 @@
 				D2FD83C8255FB54E00387B5A /* Constants.swift in Sources */,
 				D2FD83E1255FBC4100387B5A /* CourseDetailViewController.swift in Sources */,
 				D2FD83CE255FB68D00387B5A /* CourseTableViewCell.swift in Sources */,
+				D25013EB255FD72400C20A3E /* FirebaseDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
