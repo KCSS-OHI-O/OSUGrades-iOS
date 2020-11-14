@@ -20,6 +20,7 @@
 		D2FD83AF255F653300387B5A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2FD83AE255F653300387B5A /* FirebaseAuth */; };
 		D2FD83B1255F653300387B5A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D2FD83B0255F653300387B5A /* FirebaseFirestore */; };
 		D2FD83B3255F653300387B5A /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D2FD83B2255F653300387B5A /* FirebaseFirestoreSwift-Beta */; };
+		D2FD83B8255F67AD00387B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FD83B7255F67AD00387B5A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		D2FD838B255F58AE00387B5A /* OSUGradesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSUGradesUITests.swift; sourceTree = "<group>"; };
 		D2FD838D255F58AE00387B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FD839C255F59C700387B5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D2FD83B7255F67AD00387B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D2FD83A9255F59E300387B5A /* Storyboards */,
 				D2FD8372255F58AE00387B5A /* Assets.xcassets */,
 				D2FD8377255F58AE00387B5A /* Info.plist */,
+				D2FD83B7255F67AD00387B5A /* GoogleService-Info.plist */,
 				D2FD836F255F58AC00387B5A /* OSUGrades.xcdatamodeld */,
 			);
 			path = OSUGrades;
@@ -279,6 +282,7 @@
 				D2FD8373255F58AE00387B5A /* Assets.xcassets in Resources */,
 				D2FD839D255F59C700387B5A /* README.md in Resources */,
 				D2FD836E255F58AC00387B5A /* Main.storyboard in Resources */,
+				D2FD83B8255F67AD00387B5A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

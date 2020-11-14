@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>764744380360-8qe2d9r4n9f1ibn2rog6mjej0l1f1ubr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.764744380360-8qe2d9r4n9f1ibn2rog6mjej0l1f1ubr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBdB2bDUegcVmjjRDDuQ5oDQFTAszH0Iqo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>764744380360</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.osu.hack.OSUGrades</string>
+	<key>PROJECT_ID</key>
+	<string>osugrades-287d6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>osugrades-287d6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:764744380360:ios:ff7e1a78ffbe2e6d3edafd</string>
+	<key>DATABASE_URL</key>
+	<string>https://osugrades-287d6.firebaseio.com</string>
+</dict>
+</plist>
