@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
@@ -17,8 +19,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        manager.delegate = self
+        self.navigationItem.hidesBackButton = true
         
+        manager.delegate = self
         table.dataSource = self
         table.delegate = self
         
@@ -26,7 +29,16 @@ class MainViewController: UIViewController {
         table.reloadData()
     }
     
-
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out \(signOutError)")
+        }
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -53,9 +65,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MainViewController: FirebaseDelegate {
     func dataUpdated() {
-        DispatchQueue.main.async {
-            
-            self.table.reloadData()
-        }
+        self.table.reloadData()
     }
 }
