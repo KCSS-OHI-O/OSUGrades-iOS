@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D2FD8367255F58AC00387B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD8366255F58AC00387B5A /* AppDelegate.swift */; };
 		D2FD8369255F58AC00387B5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD8368255F58AC00387B5A /* SceneDelegate.swift */; };
-		D2FD836B255F58AC00387B5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD836A255F58AC00387B5A /* ViewController.swift */; };
+		D2FD836B255F58AC00387B5A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD836A255F58AC00387B5A /* WelcomeViewController.swift */; };
 		D2FD836E255F58AC00387B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FD836C255F58AC00387B5A /* Main.storyboard */; };
 		D2FD8371255F58AC00387B5A /* OSUGrades.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2FD836F255F58AC00387B5A /* OSUGrades.xcdatamodeld */; };
 		D2FD8373255F58AE00387B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2FD8372255F58AE00387B5A /* Assets.xcassets */; };
@@ -21,6 +21,15 @@
 		D2FD83B1255F653300387B5A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D2FD83B0255F653300387B5A /* FirebaseFirestore */; };
 		D2FD83B3255F653300387B5A /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D2FD83B2255F653300387B5A /* FirebaseFirestoreSwift-Beta */; };
 		D2FD83B8255F67AD00387B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FD83B7255F67AD00387B5A /* GoogleService-Info.plist */; };
+		D2FD83C3255FB48900387B5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83C2255FB48900387B5A /* MainViewController.swift */; };
+		D2FD83C8255FB54E00387B5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83C7255FB54E00387B5A /* Constants.swift */; };
+		D2FD83CE255FB68D00387B5A /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83CC255FB68D00387B5A /* CourseTableViewCell.swift */; };
+		D2FD83CF255FB68D00387B5A /* CourseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FD83CD255FB68D00387B5A /* CourseTableViewCell.xib */; };
+		D2FD83D8255FBB9B00387B5A /* ProfessorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83D6255FBB9B00387B5A /* ProfessorTableViewCell.swift */; };
+		D2FD83D9255FBB9B00387B5A /* ProfessorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2FD83D7255FBB9B00387B5A /* ProfessorTableViewCell.xib */; };
+		D2FD83E1255FBC4100387B5A /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83E0255FBC4100387B5A /* CourseDetailViewController.swift */; };
+		D2FD83E6255FBC5100387B5A /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83E5255FBC5100387B5A /* AddInfoViewController.swift */; };
+		D2FD83EB255FBC6C00387B5A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FD83EA255FBC6C00387B5A /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +53,7 @@
 		D2FD8363255F58AC00387B5A /* OSUGrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSUGrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FD8366255F58AC00387B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2FD8368255F58AC00387B5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2FD836A255F58AC00387B5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2FD836A255F58AC00387B5A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D2FD836D255F58AC00387B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2FD8370255F58AC00387B5A /* OSUGrades.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OSUGrades.xcdatamodel; sourceTree = "<group>"; };
 		D2FD8372255F58AE00387B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +67,15 @@
 		D2FD838D255F58AE00387B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2FD839C255F59C700387B5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D2FD83B7255F67AD00387B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D2FD83C2255FB48900387B5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D2FD83C7255FB54E00387B5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D2FD83CC255FB68D00387B5A /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		D2FD83CD255FB68D00387B5A /* CourseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableViewCell.xib; sourceTree = "<group>"; };
+		D2FD83D6255FBB9B00387B5A /* ProfessorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessorTableViewCell.swift; sourceTree = "<group>"; };
+		D2FD83D7255FBB9B00387B5A /* ProfessorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfessorTableViewCell.xib; sourceTree = "<group>"; };
+		D2FD83E0255FBC4100387B5A /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		D2FD83E5255FBC5100387B5A /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		D2FD83EA255FBC6C00387B5A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +137,7 @@
 				D2FD8377255F58AE00387B5A /* Info.plist */,
 				D2FD83B7255F67AD00387B5A /* GoogleService-Info.plist */,
 				D2FD836F255F58AC00387B5A /* OSUGrades.xcdatamodeld */,
+				D2FD83C7255FB54E00387B5A /* Constants.swift */,
 			);
 			path = OSUGrades;
 			sourceTree = "<group>";
@@ -153,7 +172,13 @@
 		D2FD83A5255F59D800387B5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D2FD836A255F58AC00387B5A /* ViewController.swift */,
+				D2FD836A255F58AC00387B5A /* WelcomeViewController.swift */,
+				D2FD83C2255FB48900387B5A /* MainViewController.swift */,
+				D2FD83CC255FB68D00387B5A /* CourseTableViewCell.swift */,
+				D2FD83D6255FBB9B00387B5A /* ProfessorTableViewCell.swift */,
+				D2FD83E0255FBC4100387B5A /* CourseDetailViewController.swift */,
+				D2FD83E5255FBC5100387B5A /* AddInfoViewController.swift */,
+				D2FD83EA255FBC6C00387B5A /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				D2FD836C255F58AC00387B5A /* Main.storyboard */,
+				D2FD83CD255FB68D00387B5A /* CourseTableViewCell.xib */,
+				D2FD83D7255FBB9B00387B5A /* ProfessorTableViewCell.xib */,
 				D2FD8374255F58AE00387B5A /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -278,9 +305,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2FD83CF255FB68D00387B5A /* CourseTableViewCell.xib in Resources */,
 				D2FD8376255F58AE00387B5A /* LaunchScreen.storyboard in Resources */,
 				D2FD8373255F58AE00387B5A /* Assets.xcassets in Resources */,
 				D2FD839D255F59C700387B5A /* README.md in Resources */,
+				D2FD83D9255FBB9B00387B5A /* ProfessorTableViewCell.xib in Resources */,
 				D2FD836E255F58AC00387B5A /* Main.storyboard in Resources */,
 				D2FD83B8255F67AD00387B5A /* GoogleService-Info.plist in Resources */,
 			);
@@ -307,10 +336,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2FD836B255F58AC00387B5A /* ViewController.swift in Sources */,
+				D2FD836B255F58AC00387B5A /* WelcomeViewController.swift in Sources */,
 				D2FD8367255F58AC00387B5A /* AppDelegate.swift in Sources */,
+				D2FD83EB255FBC6C00387B5A /* SignupViewController.swift in Sources */,
 				D2FD8369255F58AC00387B5A /* SceneDelegate.swift in Sources */,
 				D2FD8371255F58AC00387B5A /* OSUGrades.xcdatamodeld in Sources */,
+				D2FD83C3255FB48900387B5A /* MainViewController.swift in Sources */,
+				D2FD83D8255FBB9B00387B5A /* ProfessorTableViewCell.swift in Sources */,
+				D2FD83E6255FBC5100387B5A /* AddInfoViewController.swift in Sources */,
+				D2FD83C8255FB54E00387B5A /* Constants.swift in Sources */,
+				D2FD83E1255FBC4100387B5A /* CourseDetailViewController.swift in Sources */,
+				D2FD83CE255FB68D00387B5A /* CourseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
