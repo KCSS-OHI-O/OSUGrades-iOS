@@ -242,7 +242,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="PgO-8b-q15">
-                                <rect key="frame" x="87.666666666666686" y="241" width="200" height="276"/>
+                                <rect key="frame" x="87.666666666666686" y="141" width="200" height="276"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8A4-ri-3ar">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -309,7 +309,7 @@
                             <constraint firstItem="3dg-Ch-Hn0" firstAttribute="trailing" secondItem="atk-FC-4Ii" secondAttribute="trailing" id="6yB-55-MPU"/>
                             <constraint firstItem="3dg-Ch-Hn0" firstAttribute="leading" secondItem="atk-FC-4Ii" secondAttribute="leading" id="Gqe-Iw-2So"/>
                             <constraint firstItem="3dg-Ch-Hn0" firstAttribute="top" secondItem="atk-FC-4Ii" secondAttribute="top" id="ImG-vb-sJR"/>
-                            <constraint firstItem="PgO-8b-q15" firstAttribute="centerY" secondItem="M0Z-9D-P7z" secondAttribute="centerY" id="Pbz-AG-9lJ"/>
+                            <constraint firstItem="PgO-8b-q15" firstAttribute="centerY" secondItem="M0Z-9D-P7z" secondAttribute="centerY" constant="-100" id="Pbz-AG-9lJ"/>
                         </constraints>
                     </view>
                     <connections>
