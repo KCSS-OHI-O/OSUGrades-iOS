@@ -249,22 +249,27 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="next" textContentType="name"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-mP-V9M">
-                                        <rect key="frame" x="0.0" y="122" width="185" height="32"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-mP-V9M">
+                                        <rect key="frame" x="0.0" y="122" width="188" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDf-JW-drY">
-                                                <rect key="frame" x="0.0" y="0.0" width="14" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kY7-HI-iZA">
-                                                <rect key="frame" x="91" y="0.0" width="94" height="32"/>
+                                                <rect key="frame" x="94" y="0.0" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="stepperPressed:" destination="2AM-ma-NoG" eventType="valueChanged" id="QAW-qi-RgW"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hDf-JW-drY" secondAttribute="bottom" id="hfo-Fk-Vef"/>
+                                            <constraint firstItem="hDf-JW-drY" firstAttribute="leading" secondItem="WPz-mP-V9M" secondAttribute="leading" id="qgK-dp-m8U"/>
+                                            <constraint firstItem="hDf-JW-drY" firstAttribute="top" secondItem="WPz-mP-V9M" secondAttribute="top" id="xce-JX-Hi8"/>
+                                        </constraints>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Professor Name (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKd-wx-Inh">
                                         <rect key="frame" x="0.0" y="242" width="200" height="34"/>
