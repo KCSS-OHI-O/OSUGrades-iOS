@@ -17,6 +17,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         nameTextfield.delegate = self
         nameTextfield.tag = 0
         passwordTextfield.delegate = self
@@ -47,7 +48,12 @@ class WelcomeViewController: UIViewController {
         performSegue(withIdentifier: K.Segues.welcomeToSignup, sender: nil)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.welcomeToSignup {
+            let vc = segue.destination as! SignupViewController
+            vc.delegate = self
+        }
+    }
 }
 
 extension WelcomeViewController: UITextFieldDelegate {
@@ -59,5 +65,13 @@ extension WelcomeViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+}
+
+extension WelcomeViewController: SignupDelegate {
+    func signupCompleted() {
+        if Auth.auth().currentUser != nil {
+            performSegue(withIdentifier: K.Segues.welcomeToMain, sender: nil)
+        }
     }
 }

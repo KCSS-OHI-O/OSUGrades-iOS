@@ -15,6 +15,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
     
+    var delegate: SignupDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,9 +32,15 @@ class SignupViewController: UIViewController {
             let email = "\(nameField.text!)@osu.edu"
             Auth.auth().createUser(withEmail: email, password: passwordField.text!) { (authResult, error) in
                 if error != nil {
+                    let alert = UIAlertController(title: "Error", message: "Problem occurred while signing up", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
                     print("Error happened while signing up user")
                 } else {
-                    self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true) {
+                        self.delegate?.signupCompleted()
+                    }
                 }
             }
         }
