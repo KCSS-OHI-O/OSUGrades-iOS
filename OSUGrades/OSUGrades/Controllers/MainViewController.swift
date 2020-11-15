@@ -29,13 +29,11 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("will")
         self.navigationItem.hidesBackButton = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("disaappear")
         self.navigationItem.hidesBackButton = false
     }
     
