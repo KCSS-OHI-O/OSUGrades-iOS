@@ -156,7 +156,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZs-um-mid">
-                                <rect key="frame" x="75" y="165" width="225" height="80"/>
+                                <rect key="frame" x="75" y="113" width="225" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAN-Kv-9LS">
                                         <rect key="frame" x="0.0" y="0.0" width="225" height="80"/>
@@ -177,7 +177,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwh-iD-sfT">
-                                <rect key="frame" x="75" y="305" width="225" height="80"/>
+                                <rect key="frame" x="75" y="253" width="225" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMm-Wk-oWK">
                                         <rect key="frame" x="0.0" y="0.0" width="225" height="80"/>
@@ -213,10 +213,19 @@
                             <constraint firstItem="HZs-um-mid" firstAttribute="leading" secondItem="7AT-8M-MXC" secondAttribute="leading" constant="75" id="THE-yX-W48"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CmV-rs-pzk">
-                        <barButtonItem key="rightBarButtonItem" title="Add GPA" id="2n7-1e-4aN"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="CmV-rs-pzk">
+                        <barButtonItem key="rightBarButtonItem" title="Add GPA" id="2n7-1e-4aN">
+                            <connections>
+                                <action selector="addGpaPressed:" destination="zQx-YO-2AK" id="WMO-Of-wcg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="averageGpaLabel" destination="QAN-Kv-9LS" id="K3I-Ka-kgB"/>
+                        <outlet property="averageGpaView" destination="HZs-um-mid" id="3Hy-WV-Y4D"/>
+                        <outlet property="averageRatingLabel" destination="gMm-Wk-oWK" id="Vjy-8M-Q5g"/>
+                        <outlet property="averageRatingView" destination="Jwh-iD-sfT" id="6FO-3W-aRg"/>
+                        <outlet property="professorTable" destination="Hb8-uZ-I5I" id="9w6-oh-DxN"/>
                         <segue destination="2AM-ma-NoG" kind="presentation" identifier="detailToAdd" id="HMk-oQ-4kG"/>
                     </connections>
                 </viewController>
@@ -241,16 +250,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-mP-V9M">
-                                        <rect key="frame" x="0.0" y="122" width="181.33333333333334" height="32"/>
+                                        <rect key="frame" x="0.0" y="122" width="185" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDf-JW-drY">
-                                                <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="32"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="14" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kY7-HI-iZA">
-                                                <rect key="frame" x="87.333333333333314" y="0.0" width="94" height="32"/>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kY7-HI-iZA">
+                                                <rect key="frame" x="91" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperPressed:" destination="2AM-ma-NoG" eventType="valueChanged" id="QAW-qi-RgW"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -271,7 +283,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="Add Info" id="zKr-sB-MzX">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="BxY-Dc-Kdd"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="BxY-Dc-Kdd">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="2AM-ma-NoG" id="iE6-CM-nH0"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="oDx-ve-1jB"/>
                                     </navigationItem>
                                 </items>
@@ -287,6 +303,10 @@
                             <constraint firstItem="PgO-8b-q15" firstAttribute="centerY" secondItem="M0Z-9D-P7z" secondAttribute="centerY" id="Pbz-AG-9lJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ratingLabel" destination="hDf-JW-drY" id="Mws-gH-jHT"/>
+                        <outlet property="stepper" destination="kY7-HI-iZA" id="uS4-3H-aqR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4K-XE-cxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

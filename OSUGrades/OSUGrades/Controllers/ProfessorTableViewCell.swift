@@ -9,6 +9,8 @@ import UIKit
 
 class ProfessorTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var professorNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

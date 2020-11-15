@@ -15,8 +15,30 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YW6-go-oyt">
+                        <rect key="frame" x="10" y="0.0" width="300" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qC1-ZB-eQz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="YW6-go-oyt" secondAttribute="bottom" id="3yE-2q-9pU"/>
+                    <constraint firstItem="YW6-go-oyt" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6Yo-gh-1x4"/>
+                    <constraint firstItem="YW6-go-oyt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lz0-Av-5dP"/>
+                    <constraint firstAttribute="trailing" secondItem="YW6-go-oyt" secondAttribute="trailing" constant="10" id="NNx-2a-1bL"/>
+                    <constraint firstItem="YW6-go-oyt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="auv-AO-Vp7"/>
+                    <constraint firstItem="YW6-go-oyt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bpZ-Dh-4Ns"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="professorNameLabel" destination="YW6-go-oyt" id="iNA-VR-nkW"/>
+            </connections>
             <point key="canvasLocation" x="139" y="110"/>
         </tableViewCell>
     </objects>

@@ -19,14 +19,24 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationItem.hidesBackButton = true
-        
         manager.delegate = self
         table.dataSource = self
         table.delegate = self
         
         table.register(UINib(nibName: K.Cells.CourseTableViewCell, bundle: nil), forCellReuseIdentifier: K.Cells.courseCellIdentifier)
         table.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("will")
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("disaappear")
+        self.navigationItem.hidesBackButton = false
     }
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
@@ -38,17 +48,6 @@ class MainViewController: UIViewController {
         }
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -60,6 +59,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.courseCellIdentifier) as! CourseTableViewCell
         cell.courseName.text = manager.courses[indexPath.row].courseName
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let course = manager.courses[indexPath.row]
+        performSegue(withIdentifier: K.Segues.mainToDetail, sender: course)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segues.mainToDetail {
+            let course = sender as! Course
+            let vc = segue.destination as! CourseDetailViewController
+            vc.course = course
+        }
     }
 }
 
