@@ -36,7 +36,10 @@ class WelcomeViewController: UIViewController {
             let useremail = "\(username)@osu.edu"
             Auth.auth().signIn(withEmail: useremail, password: password) { (authResult, error) in
                 if error != nil {
-                    print("Error happened while signing in")
+                    let alert = UIAlertController(title: "Alert", message: "Incorrect ID or password", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
                 } else {
                     self.performSegue(withIdentifier: K.Segues.welcomeToMain, sender: nil)
                 }
