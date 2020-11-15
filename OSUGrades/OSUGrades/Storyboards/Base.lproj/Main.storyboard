@@ -363,11 +363,13 @@
                                 <items>
                                     <navigationItem title="Add Info" id="zKr-sB-MzX">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="BxY-Dc-Kdd">
+                                            <color key="tintColor" systemColor="labelColor"/>
                                             <connections>
                                                 <action selector="cancelPressed:" destination="2AM-ma-NoG" id="iE6-CM-nH0"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="oDx-ve-1jB">
+                                            <color key="tintColor" systemColor="labelColor"/>
                                             <connections>
                                                 <action selector="savePressed:" destination="2AM-ma-NoG" id="Nyd-5n-vDu"/>
                                             </connections>

@@ -25,6 +25,8 @@ class AddInfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationBar.topItem!.title = "Add for \(course.courseName)"
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
         gpaTextField.tag = 0
         professorNameField.tag = 1
         
