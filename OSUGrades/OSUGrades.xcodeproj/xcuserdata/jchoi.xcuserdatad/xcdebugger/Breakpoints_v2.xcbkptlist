@@ -14,9 +14,73 @@
             filePath = "OSUGrades/Controllers/AddInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "stepperPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9596E16D-AF03-4BC6-B224-E621BD03BAAF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OSUGrades/Controllers/CourseDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "readData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9596E16D-AF03-4BC6-B224-E621BD03BAAF - a6e527ad0f5ba3ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OSUGrades.CourseDetailViewController.(readData in _00E17CA808CE700B67E00B686D0A5C51)() -&gt; ()"
+                  moduleName = "OSUGrades"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jchoi/Swift/OSUGrades-iOS/OSUGrades/OSUGrades/Controllers/CourseDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "9596E16D-AF03-4BC6-B224-E621BD03BAAF - 23a24a50038db8a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in OSUGrades.CourseDetailViewController.(readData in _00E17CA808CE700B67E00B686D0A5C51)() -&gt; ()"
+                  moduleName = "OSUGrades"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jchoi/Swift/OSUGrades-iOS/OSUGrades/OSUGrades/Controllers/CourseDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "233">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D218D73C-8806-4D27-845A-2E58CC1DD3E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OSUGrades/Models/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "updateCourse(courseName:gpa:rating:professor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

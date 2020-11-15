@@ -7,6 +7,8 @@
 
 import UIKit
 import SafariServices
+import Firebase
+import FirebaseFirestore
 
 class CourseDetailViewController: UIViewController {
     
@@ -20,12 +22,18 @@ class CourseDetailViewController: UIViewController {
     
     @IBOutlet weak var professorTable: UITableView!
     
+    var manager: DataManager!
+    
+    let db = Firestore.firestore()
+    
+    var professorNames = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = "\(course.courseName) Class Info"
-        
+
         averageGpaView.layer.cornerRadius = 15
         averageRatingView.layer.cornerRadius = 15
         
@@ -35,6 +43,7 @@ class CourseDetailViewController: UIViewController {
         professorTable.dataSource = self
         professorTable.delegate = self
         professorTable.register(UINib(nibName: K.Cells.ProfessorTableViewCell, bundle: nil), forCellReuseIdentifier: K.Cells.professorCellIdentifier)
+        readData()
     }
     
     @IBAction func addGpaPressed(_ sender: UIBarButtonItem) {
@@ -45,25 +54,41 @@ class CourseDetailViewController: UIViewController {
         if segue.identifier == K.Segues.detailToAdd {
             let vc = segue.destination as! AddInfoViewController
             vc.course = course
+            vc.manager = manager
+        }
+    }
+    
+    private func readData() {
+        db.collection("courses").document(course.courseName).addSnapshotListener { (documentSnapshot, error) in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+            guard let data = document.data() else {
+                print("Document was empty")
+                return
+            }
+            DispatchQueue.main.async {
+                self.averageGpaLabel.text = String(format: "%.2f", data["averageGpa"] as! Double)
+                self.averageRatingLabel.text = String(format: "%.2f", data["rating"] as! Double)
+                if let profList = data["professors"] as? [String] {
+                    self.professorNames = profList
+                }
+                self.professorTable.reloadData()
+            }
         }
     }
 }
 
 extension CourseDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let professors = course.professors {
-            return professors.count
-        }
-        return 0
+        return professorNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let professors = course.professors {
-            let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.professorCellIdentifier) as! ProfessorTableViewCell
-            cell.professorNameLabel.text = professors[indexPath.row]
-            return cell
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.Cells.professorCellIdentifier) as! ProfessorTableViewCell
+        cell.professorNameLabel.text = professorNames[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -72,7 +97,7 @@ extension CourseDetailViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let url = URL(string: course.professors![indexPath.row].getUrl())
+        let url = URL(string: course.professors![indexPath.row].getUrl().addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         
         let safariVc = SFSafariViewController(url: url!)
         safariVc.modalPresentationStyle = .pageSheet

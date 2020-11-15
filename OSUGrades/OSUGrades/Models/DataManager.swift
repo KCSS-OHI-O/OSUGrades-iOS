@@ -26,6 +26,7 @@ class DataManager {
             } else {
                 for document in querySnapshot!.documents {
                     let courseName = document.data()["course"] as! String
+                    print(courseName)
                     let averageGpa = document.data()["averageGpa"] as! Double
                     let rating = document.data()["rating"] as! Double
                     let reported = document.data()["reported"] as! Int
@@ -40,5 +41,40 @@ class DataManager {
                 }
             }
         }
+    }
+    
+    func updateCourse(courseName: String, gpa: Double, rating: Int, professor: String?) {
+        let index = coursesMap[courseName]
+        let course = courses[index!]
+        course.averageGpa = ((course.averageGpa * Double(course.reported)) + gpa) / (Double(course.reported) + 1)
+        course.rating = ((course.rating * Double(course.reported)) + Double(rating)) / (Double(course.reported) + 1)
+        course.reported += 1
+        
+        // update course on Firebase
+        var dataset: [String: Any] = [
+            "averageGpa": course.averageGpa,
+            "course": course.courseName,
+            "rating": course.rating,
+            "reported": course.reported
+        ]
+        // if professor list exists, add
+        if let profName = professor {
+            // check if professor list in course exists
+            var tempProfList = [String]()
+            if var profList = course.professors {
+                profList.append(profName)
+                tempProfList = profList
+            } else {
+                course.professors = [profName]
+                tempProfList = course.professors!
+            }
+            dataset["professors"] = tempProfList
+        }
+        db.collection("courses").document(courseName).setData(dataset) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            }
+        }
+        delegate?.dataUpdated()
     }
 }

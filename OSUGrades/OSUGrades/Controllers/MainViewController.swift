@@ -74,6 +74,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             let course = sender as! Course
             let vc = segue.destination as! CourseDetailViewController
             vc.course = course
+            vc.manager = manager
         }
     }
 }

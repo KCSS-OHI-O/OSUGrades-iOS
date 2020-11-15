@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Course: Hashable {
+class Course {
     
     let courseName: String
     var averageGpa: Double

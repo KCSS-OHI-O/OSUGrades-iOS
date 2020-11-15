@@ -247,7 +247,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GPA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8A4-ri-3ar">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="decimalPad" returnKeyType="next" textContentType="name"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-mP-V9M">
                                         <rect key="frame" x="0.0" y="122" width="185" height="32"/>
@@ -269,7 +269,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Professor Name (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tKd-wx-Inh">
                                         <rect key="frame" x="0.0" y="242" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -288,7 +288,11 @@
                                                 <action selector="cancelPressed:" destination="2AM-ma-NoG" id="iE6-CM-nH0"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="oDx-ve-1jB"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="oDx-ve-1jB">
+                                            <connections>
+                                                <action selector="savePressed:" destination="2AM-ma-NoG" id="Nyd-5n-vDu"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -304,6 +308,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gpaTextField" destination="8A4-ri-3ar" id="e20-24-AYz"/>
+                        <outlet property="navigationBar" destination="3dg-Ch-Hn0" id="h1J-gW-oMu"/>
+                        <outlet property="professorNameField" destination="tKd-wx-Inh" id="nwK-M8-WFb"/>
                         <outlet property="ratingLabel" destination="hDf-JW-drY" id="Mws-gH-jHT"/>
                         <outlet property="stepper" destination="kY7-HI-iZA" id="uS4-3H-aqR"/>
                     </connections>
