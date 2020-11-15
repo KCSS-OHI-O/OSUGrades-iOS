@@ -67,6 +67,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: K.Segues.mainToDetail, sender: course)
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Courses"
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Segues.mainToDetail {
             let course = sender as! Course

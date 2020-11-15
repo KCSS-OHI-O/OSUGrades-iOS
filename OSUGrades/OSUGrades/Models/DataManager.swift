@@ -26,8 +26,8 @@ class DataManager {
             } else {
                 for document in querySnapshot!.documents {
                     let courseName = document.data()["course"] as! String
-                    let averageGpa = document.data()["averageGpa"] as! Float
-                    let rating = document.data()["rating"] as! Float
+                    let averageGpa = document.data()["averageGpa"] as! Double
+                    let rating = document.data()["rating"] as! Double
                     let reported = document.data()["reported"] as! Int
                     let professors = document.data()["professors"] as! [String]?
                     let newCourse: Course = Course(courseName: courseName, averageGpa: averageGpa, rating: rating, reported: reported, professors: professors)

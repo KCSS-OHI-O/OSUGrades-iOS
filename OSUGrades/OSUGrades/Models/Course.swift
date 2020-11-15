@@ -10,12 +10,12 @@ import Foundation
 struct Course: Hashable {
     
     let courseName: String
-    var averageGpa: Float
-    var rating: Float
+    var averageGpa: Double
+    var rating: Double
     var reported: Int
     var professors: [String]?
     
-    init(courseName: String, averageGpa: Float, rating: Float, reported: Int, professors: [String]?) {
+    init(courseName: String, averageGpa: Double, rating: Double, reported: Int, professors: [String]?) {
         self.courseName = courseName
         self.averageGpa = averageGpa
         self.rating = rating
