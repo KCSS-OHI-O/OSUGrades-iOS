@@ -13,9 +13,9 @@ class Course {
     var averageGpa: Double
     var rating: Double
     var reported: Int
-    var professors: [String]?
+    var professors: [String]
     
-    init(courseName: String, averageGpa: Double, rating: Double, reported: Int, professors: [String]?) {
+    init(courseName: String, averageGpa: Double, rating: Double, reported: Int, professors: [String]) {
         self.courseName = courseName
         self.averageGpa = averageGpa
         self.rating = rating

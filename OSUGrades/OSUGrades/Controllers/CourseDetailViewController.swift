@@ -97,7 +97,7 @@ extension CourseDetailViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let url = URL(string: course.professors![indexPath.row].getUrl().addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        let url = URL(string: course.professors[indexPath.row].getUrl().addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         
         let safariVc = SFSafariViewController(url: url!)
         safariVc.modalPresentationStyle = .pageSheet
