@@ -28,6 +28,7 @@ class AddInfoViewController: UIViewController {
         gpaTextField.tag = 0
         professorNameField.tag = 1
         
+        professorNameField.delegate = self
         isModalInPresentation = true
         stepper.value = 1
         stepper.minimumValue = 1
@@ -36,6 +37,10 @@ class AddInfoViewController: UIViewController {
     }
     
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
+        saveData()
+    }
+    
+    private func saveData() {
         if let gpaText = gpaTextField.text, let gpa = Double(gpaText) {
             if !checkGpa(gpa: gpa) {
                 let alert = UIAlertController(title: "Invalid GPA", message: "GPA must be between 0.0 to 4.0", preferredStyle: .alert)
@@ -70,6 +75,7 @@ class AddInfoViewController: UIViewController {
 extension AddInfoViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        saveData()
         return true
     }
 }
