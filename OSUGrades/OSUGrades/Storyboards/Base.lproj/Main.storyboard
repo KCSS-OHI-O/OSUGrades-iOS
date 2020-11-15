@@ -36,21 +36,25 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="8gy-Oe-piD">
-                                <rect key="frame" x="100" y="528" width="175" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8gy-Oe-piD">
+                                <rect key="frame" x="10" y="572" width="355" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9b2-v0-Ccn">
-                                        <rect key="frame" x="0.0" y="0.0" width="175" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="48"/>
+                                        <color key="backgroundColor" red="0.73333333333333328" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Log In"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="LOG IN"/>
                                         <connections>
                                             <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UI9-gd-mPl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-2g-KzS">
-                                        <rect key="frame" x="0.0" y="102" width="175" height="48"/>
+                                        <rect key="frame" x="0.0" y="58" width="355" height="48"/>
+                                        <color key="backgroundColor" red="0.19940994437889092" green="0.20085076210819466" blue="0.87507977726483577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Sign Up"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="SIGN UP"/>
                                         <connections>
                                             <action selector="signupPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJm-Ay-PMJ"/>
                                             <segue destination="DF5-ux-Fgy" kind="presentation" identifier="welcomeToSignup" id="gas-fe-Vei"/>
@@ -69,19 +73,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8gy-Oe-piD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="2NI-pL-DFO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8gy-Oe-piD" secondAttribute="bottom" constant="100" id="4Xe-Hx-PH8"/>
                             <constraint firstItem="x9g-eC-RKu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jrj-ea-SBQ"/>
                             <constraint firstItem="8gy-Oe-piD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8p-qO-VKW"/>
                             <constraint firstItem="hJd-t3-oLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Oku-Zs-3wC"/>
                             <constraint firstItem="dfx-XB-FwP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X7b-nh-LeC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8gy-Oe-piD" secondAttribute="trailing" constant="100" id="arl-eo-mKl"/>
                             <constraint firstAttribute="bottom" secondItem="dfx-XB-FwP" secondAttribute="bottom" constant="606" id="cyo-Qh-dlo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x9g-eC-RKu" secondAttribute="trailing" id="hk2-BG-L0u"/>
                             <constraint firstItem="hJd-t3-oLr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hu9-xQ-IZ0"/>
                             <constraint firstItem="x9g-eC-RKu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jVr-FZ-l19"/>
+                            <constraint firstItem="8gy-Oe-piD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lMp-Ld-VXu"/>
                             <constraint firstItem="dfx-XB-FwP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mGD-4h-ft8"/>
                             <constraint firstAttribute="trailing" secondItem="dfx-XB-FwP" secondAttribute="trailing" id="wS5-9q-gK7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8gy-Oe-piD" secondAttribute="trailing" constant="10" id="x2B-mE-9Di"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hJd-t3-oLr" secondAttribute="trailing" constant="10" id="xaN-B5-UHw"/>
                         </constraints>
                     </view>
@@ -423,11 +427,13 @@
                                 <items>
                                     <navigationItem title="Sign Up" id="WYI-HX-gYu">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="w3y-ru-8dN">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="cancelPressed:" destination="DF5-ux-Fgy" id="I8i-4E-fEJ"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="hBu-ye-wRv">
+                                            <color key="tintColor" systemColor="labelColor"/>
                                             <connections>
                                                 <action selector="donePressed:" destination="DF5-ux-Fgy" id="eA3-S5-9oJ"/>
                                             </connections>
@@ -485,7 +491,7 @@
     <resources>
         <image name="osu3" width="112.5" height="112.5"/>
         <namedColor name="BuckeyeColor">
-            <color red="0.73333333333333328" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.73299998044967651" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
